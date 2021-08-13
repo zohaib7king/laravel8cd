@@ -43,7 +43,7 @@ pipeline {
         }
         stage("Acceptance test curl") {
             steps {
-                sleep 20
+                sleep 2
                 sh "echo done"
             }
         }
@@ -59,7 +59,7 @@ pipeline {
         }
         stage ("Deploy") {
             steps {
-                sh "ssh -i /var/lib/jenkins/google_compute_engine aafan0103@34.125.192.201 /home/aafan0103/install.sh"
+                sh "ssh -i /var/lib/jenkins/google_compute_engine -o StrictHostKeyChecking=no aafan0103@34.125.192.201 /home/aafan0103/install.sh"
             }
         }
     }
