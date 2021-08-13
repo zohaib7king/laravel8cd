@@ -57,8 +57,10 @@ pipeline {
                 }
             }
         }
-        		stage ("Deploy") {
-                    sh "ssh -i google_compute_engine aafan0103@34.125.192.201 /home/aafan0103/install.sh"
-                    }
+        stage ("Deploy") {
+            steps {
+                sh "ssh -i google_compute_engine aafan0103@34.125.192.201 /home/aafan0103/install.sh"
+            }
+        }
     }
 }
