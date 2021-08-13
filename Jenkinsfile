@@ -38,7 +38,7 @@ pipeline {
         }
         stage("Deploy to staging") {
             steps {
-                sh "docker run -d --rm -p 80:80 --name laravel8cd danielgara/laravel8cd"
+                sh "docker run -d --rm -p 80:8000 --name laravel8cd danielgara/laravel8cd"
             }
         }
         stage("Acceptance test curl") {
