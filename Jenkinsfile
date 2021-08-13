@@ -18,7 +18,7 @@ pipeline {
         }
         stage("Code coverage") {
             steps {
-                sh "vendor/bin/phpunit --coverage-html "reports/coverage""
+                sh "vendor/bin/phpunit --coverage-html reports/coverage"
             }
         }
         stage("Static code analysis larastan") {
