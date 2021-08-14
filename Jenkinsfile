@@ -59,7 +59,7 @@ pipeline {
         }
         stage ("Deploy") {
             steps {
-                sh "ssh -i /var/lib/jenkins/google_compute_engine -o StrictHostKeyChecking=no aafan0103@34.125.192.201 /home/aafan0103/install.sh"
+                sh "ssh -i /var/lib/jenkins/id_rsa -o StrictHostKeyChecking=no aafan0103@34.131.90.41 /home/aafan0103/install.sh"
             }
         }
     }
